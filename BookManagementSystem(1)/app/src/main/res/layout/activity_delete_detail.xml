@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_echo"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue_100">
+
+        <ImageView
+            android:id="@+id/detail_return_iv"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/return_key" />
+
+        <TextView
+            android:id="@+id/detail_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/detail_return_iv"
+            android:text="记录详情"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/detail_borrowbk_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/detail_jine_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:text="书名:"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/detail_bookName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/detail_sort_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:text="书籍类别:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/detail_bookKind_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:text="学习"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/detail_kind_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:text="作者:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/detail_writer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/detail_account_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:text="价格:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/detail_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:text="0.00"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/detail_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:text="状态:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/detail_flag_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/detail_beizhu_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:text="备注:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/detail_remarks_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_beizhu_tv"
+            android:layout_margin="11dp"
+            android:text="未填写"
+            android:textColor="@color/grey_666666"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</LinearLayout>

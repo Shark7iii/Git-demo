@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">BookManagementSystem</string>
+    <string name="system_name">图书管理系统</string>
+    <string name="user_name">用户名:</string>
+    <string name="input_user_name">请输入用户名</string>
+    <string name="password">密码:</string>
+    <string name="input_password">请输入密码</string>
+    <string name="remember_password">记住密码</string>
+    <string name="show_password">显示密码</string>
+    <string name="user_register">用户注册</string>
+    <string name="ensure_password">确认密码:</string>
+    <string name="input_password_2">请再次输入密码</string>
+    <string name="register">注册</string>
+    <string name="return1">返回</string>
+    <string name="check_book">查询书籍</string>
+    <string name="add_book">增加书籍</string>
+    <string name="edit_book">修改书籍</string>
+    <string name="delete_book">删除书籍</string>
+    <string name="borrow_book">借阅书籍</string>
+    <string name="message">留言区</string>
+    <string name="reader_check">借书记录</string>
+    <string name="book_name">书籍名字:</string>
+    <string name="ensure">确认</string>
+    <string name="cancel">取消</string>
+    <string name="book_id">书籍编号:</string>
+    <string name="book_money">书籍金额:</string>
+    <string name="book_kind">书籍分类:</string>
+    <string name="book_writer">书籍作者:</string>
+    <string name="old_book_name">原书籍名字:</string>
+    <string name="new_book_name">书籍新名字:</string>
+    <string name="new_book_kind">书籍新分类:</string>
+    <string name="new_book_writer">书籍新作者:</string>
+    <string name="input_key_word">输入关键词</string>
+    <string name="book_name_1">创新工程实践</string>
+    <string name="writer">作者</string>
+
+
+    <string-array name="type_array">
+        <item>全部</item>
+        <item>学习</item>
+        <item>武侠</item>
+        <item>言情</item>
+        <item>推理</item>
+    </string-array>
+
+</resources>

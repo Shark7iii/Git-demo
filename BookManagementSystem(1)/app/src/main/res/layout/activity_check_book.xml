@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Check_Activity">
+
+    <RelativeLayout
+        android:id="@+id/search_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue_100">
+
+        <ImageView
+            android:id="@+id/search_return_iv"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/return_key" />
+
+        <EditText
+            android:id="@+id/search_head_et"
+            android:layout_width="245dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/search_return_iv"
+            android:background="@color/blue_confirm"
+            android:drawableLeft="@drawable/search2"
+            android:hint=" 书名/作者"
+            android:paddingLeft="3dp"
+            android:textColor="@color/white"
+            android:textColorHint="#88E6E6E6"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/search_button_111"
+            android:layout_width="55dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="11.5dp"
+            android:layout_toRightOf="@id/search_head_et"
+            android:background="@drawable/dialog_btn_bg"
+            android:text="搜索"
+            android:textColor="@color/white_"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/search_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_rl"
+        android:background="@color/blue_100"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/search_leixing_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:text="类型："
+            android:textColor="@color/white_"
+            android:textSize="17sp" />
+
+        <Spinner
+            android:id="@+id/search_flag_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/search_leixing_tv" />
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/search_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_rl2"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:padding="10dp"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/search_empty_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:drawableTop="@mipmap/empty_data"
+        android:gravity="center"
+        android:drawablePadding="5dp"
+        android:text="找不到记录，换个词试试吧"
+        android:textColor="#ffbfbfbf"
+        android:textSize="17sp" />
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Check_Activity">
+
+    <RelativeLayout
+        android:id="@+id/my_borrow_book_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue_100">
+
+        <ImageView
+            android:id="@+id/my_borrow_book_return_iv"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/return_key" />
+
+        <TextView
+            android:id="@+id/my_borrow_book_head_et"
+            android:layout_width="245dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/my_borrow_book_return_iv"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text=" 我的借书记录"
+            android:paddingLeft="3dp"
+            android:textColor="@color/white"
+            android:textColorHint="#88E6E6E6"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/my_borrow_book_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_borrow_book_rl"
+        android:background="@color/blue_100"
+        android:padding="7dp">
+
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/my_borrow_book_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_borrow_book_rl2"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:padding="10dp"
+        android:scrollbars="none" />
+
+
+</RelativeLayout>
