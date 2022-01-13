@@ -13,10 +13,10 @@ import com.jnu.bookmanagementsystem.db.dao.UserDao;
 public class UserDaoImpl implements UserDao {
     private SQLiteDatabase sdb = DBController.getDatabase();
 
-    //登录用
+
     public int login(String username, String password) {
         String sql = "select * from user where username=? and password=?";
-
+        // login
         Cursor cursor = null;
         try {
             cursor = sdb.rawQuery(sql, new String[]{username, password});
@@ -54,7 +54,7 @@ public class UserDaoImpl implements UserDao {
 
     }
 
-    //注册用
+    // register
     @SuppressLint("Range")
     public boolean register(String username, String password, int kind) {
         String check = "select * from user where username=?";

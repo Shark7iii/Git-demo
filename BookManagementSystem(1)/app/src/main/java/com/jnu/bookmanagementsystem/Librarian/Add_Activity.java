@@ -71,11 +71,11 @@ public class Add_Activity extends AppCompatActivity implements View.OnClickListe
                 book.setUserId(0);
                 bookService.addBook(book);
 
-
                 Toast.makeText(this, "添加新书籍成功", Toast.LENGTH_LONG).show();
                 finish();
                 break;
-            case R.id.cancel_button:
+            case R.id.add_no_button:
+                finish();
                 break;
         }
     }

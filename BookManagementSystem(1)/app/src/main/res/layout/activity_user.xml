@@ -29,7 +29,8 @@
                 app:subtitleTextColor="@android:color/white"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:title="青山小帅"
-                app:titleTextColor="@android:color/white"></androidx.appcompat.widget.Toolbar>
+                app:titleTextColor="@android:color/white">
+            </androidx.appcompat.widget.Toolbar>
 
             <TextView
                 android:id="@+id/main_return_top"
@@ -82,6 +83,7 @@
         app:headerLayout="@layout/navigationview_header"
         app:insetForeground="@android:color/transparent"
         app:itemTextColor="@color/black"
-        app:menu="@menu/menu"></com.google.android.material.navigation.NavigationView>
+        app:menu="@menu/menu">
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

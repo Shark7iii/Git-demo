@@ -37,31 +37,31 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
      * 初始化控件
      */
     private void init() {
-        new_username=(EditText)findViewById(R.id.newusername_text);//创建注册页面的用户名输入框对象
-        new_password=(EditText)findViewById(R.id.newpassword_text);//创建注册页面的密码输入框对象
-        new_again_password=(EditText)findViewById(R.id.new_again_password_text);//创建注册页面的再次确认密码输入框对象
-        new_register=(Button)findViewById(R.id.yes_register_button);//创建注册按钮对象
-        back=(Button)findViewById(R.id.back_button);//创建返回按钮对象
-        ispassword=(CheckBox)findViewById(R.id.new_password_checkbook);//创建显示密码按钮对象
+        new_username=(EditText)findViewById(R.id.newusername_text);// Create a user name input box object for the registration page
+        new_password=(EditText)findViewById(R.id.newpassword_text);// Create a password input field object for the registration page
+        new_again_password=(EditText)findViewById(R.id.new_again_password_text);// Create a re-confirm password input box object for the registration page
+        new_register=(Button)findViewById(R.id.yes_register_button);// Create a registration button object
+        back=(Button)findViewById(R.id.back_button);// Create a return button object
+        ispassword=(CheckBox)findViewById(R.id.new_password_checkbook);// Create a display password button object
     }
     private void register(){
-        //获取输入的用户名与密码
+        // Get the entered user name and password
         String usernametext=new_username.getText().toString().trim();
         String passwordtext=new_password.getText().toString().trim();
         int flag=0;
-
+        // Verify that the entered passwords are the same
         if (usernametext.equals("") || passwordtext.equals("")){
             Toast.makeText(RegisterActivity.this,"帐号或密码不能为空",Toast.LENGTH_LONG).show();
             flag++;
         }
-        //校验两次输入的密码是否一致
+
         String again_password=new_again_password.getText().toString().trim();
         if(!again_password.equals(passwordtext)){
             Toast.makeText(RegisterActivity.this,"密码不一致",Toast.LENGTH_LONG).show();
             flag++;
         }
         if (flag == 0) {
-            //调用注册功能
+            // Call the registration function
             boolean result = userService.register(usernametext, passwordtext, 0);//判断是否注册成功
             if (result) {
                 Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_LONG).show();
@@ -69,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(intent);
             } else {
                 Toast.makeText(RegisterActivity.this, "用户名已存在", Toast.LENGTH_LONG).show();
-                //清空用户名框文本,并把输入光标放回到输入框
+                // Clear the username field text and place the input cursor back in the input field
                 this.new_username.setText("");
                 this.new_username.requestFocus();
             }
@@ -99,11 +99,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    //显示明文，即设置为可见的密码
+                    // Display plain text, that is, set to visible password
                     new_password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                     new_again_password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                 }else{
-                    //不显示明文，即设置为不可见的密码
+                    // Do not display the plaintext, that is, set the password to invisible
                     new_password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                     new_again_password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                 }

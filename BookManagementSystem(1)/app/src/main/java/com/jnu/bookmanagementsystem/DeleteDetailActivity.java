@@ -96,10 +96,6 @@ public class DeleteDetailActivity extends AppCompatActivity {
         bookKindTv.setText(book.getBookKind());
         writerTv.setText(book.getWriter());
         moneyTv.setText(String.format("%.2f", book.getMoney()));
-        if (book.getFlag() == 1)
-            flagTv.setText("可借出");
-        else
-            flagTv.setText("已借出");
 
     }
     /**

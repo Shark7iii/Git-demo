@@ -51,21 +51,20 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         ScreenInfoUtils.fullScreen(this);
         setContentView(R.layout.activity_user);
 
-
-        //设置侧边框
+        // Set the side box
         initSidebar();
         aa = findViewById(R.id.main_return_top);
-        //开始设置RecyclerView
+        // Start setting RecyclerView
         recyclerView = (RecyclerView) this.findViewById(R.id.user_main_rv);
-        //设置固定大小
+        // Set a fixed size
         recyclerView.setHasFixedSize(true);
-        //给RecyclerView设置布局管理器
+        // Set the RecyclerView layout manager
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
-        //创建适配器并且设置
+        // Create the adapter and set it
         bookAdapter = new BookAdapter(list, this);
         bookAdapter.setHasStableIds(true);
         recyclerView.setAdapter(bookAdapter);
-        //设置响应事件
+        // Set the response event
         initListener();
         aa.setOnClickListener(this);
     }

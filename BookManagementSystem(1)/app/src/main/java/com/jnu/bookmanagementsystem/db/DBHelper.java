@@ -17,14 +17,14 @@ public class DBHelper extends SQLiteOpenHelper {
     //    创建数据库的方法，只有项目第一次运行时，会被调用
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //创建用户表
+        // Create user table
         String user_table = "create table user(uid integer primary key autoincrement," +
                 "username varchar(20)," +
                 "password varchar(20)," +
                 "kind integer default 0)";
         db.execSQL(user_table);
 
-        //创建书籍表
+        // Create book table
         String book_table = "create table book(id integer primary key autoincrement," +
                 "imageId integer," +
                 "bookName varchar(30)," +
@@ -40,6 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         db.execSQL(book_table);
 
+        // Create lend table
         String lend_table = "create table lend(id integer primary key autoincrement," +
                 "uid integer," +
                 "username varchar(30)," +

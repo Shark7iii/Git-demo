@@ -85,24 +85,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void login() {
-        //获取输入的用户名与密码
+        // Get the entered user name and password
         String usernametext = username.getText().toString().trim();
         String passwordtext = password.getText().toString().trim();
 
-        //调用登录功能
+        // Invoke the login function
         int uid = userService.login(usernametext, passwordtext);
         if (uid == 0) {
-            //如果登录不成功
+            // If the login fails
             Toast.makeText(MainActivity.this, "用户名或密码错误", Toast.LENGTH_LONG).show();
-            //将用户名框与密码框清空，并把光标放回框中
+            // Clear the username and password boxes and put the cursor back in the box
             this.username.setText("");
             this.password.setText("");
             this.username.requestFocus();
             this.password.requestFocus();
 
         } else {
+            // Login succeeded
             UID=uid;
-            //登录成功
             Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(MainActivity.this,UserActivity.class);
             startActivity(intent);
